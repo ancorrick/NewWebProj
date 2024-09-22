@@ -206,9 +206,9 @@ body {
 	text-transform: uppercase;
 	font-size: .65em;
 	cursor: pointer;
-	position: fixed; /* Фиксируем кнопку на экране */
-	top: 150px;       /* Отступ сверху */
-	right: 150px;     /* Отступ справа */
+	position: fixed;
+	top: 150px;
+	right: 150px;
 	padding: 10px 20px;
 	z-index: 9999; 
 }
