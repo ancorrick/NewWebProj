@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Popins", sans-serif;
+}
+
+:root {
+	--index: calc(1vw + 1vh);
+	--transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+}
+
+body {
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #000;
+	color: #fff;
+	font-family: kamerik-3d;
+}
+
+.wrapper {
+	width: 420px;
+	background-color: transparent;
+	border: 2px solid rgb(255, 255, 255, .2);
+	backdrop-filter: blur(20px);
+	box-shadow: 0 0 10px rgba(0,0,0, .2);
+	color: #fff;
+	border-radius: 50px;
+	padding: 30px 40px;
+}
+
+.wrapper h1{
+	font-size: 36px;
+	text-align: center;
+}
+
+.wrapper .input--box {
+	width: 100%;
+	height: 50px;
+	margin: 30px 0;
+	position: relative;
+}
+
+.input--box input{
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	border: 2px solid rgb(255, 255, 255, .2);
+	border-radius: 40px;
+	font-size: 16px;
+	color: #fff;
+	padding: 20px 45px 20px 20px;
+}
+
+.input--box input::placeholder{
+	color: #fff;
+}
+
+.input--box i{
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 20px;
+}
+
+.wrapper .remember{
+	display: flex;
+	justify-content: space-between;
+	font-style: 14.5px;
+	margin: -15px 0 15px;
+}
+
+.remember label input{
+	accent-color: #fff;
+	margin-right: 3px;
+}
+
+.remember a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.remember a:hover {
+	text-decoration: underline;
+}
+
+.wrapper .btn{
+	width: 100%;
+	height: 45px;
+	background: #fff;
+	border: none;
+	outline: none;
+	border-radius: 40px;
+	box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+	cursor: pointer;
+	font-size: 16px;
+	color: #333;
+	font-weight: 600;
+}
+
+.wrapper .register--link {
+	font-size: 14.5px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.register--link p a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.register--link p a:hover{
+	text-decoration: underline;
+	color: #fff;
+}
+
+/* .logo {
+	--logo-size: calc(var(--index) * 7.8);
+	width: var(--logo-size);
+	height: var(--logo-size);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: calc(51% - calc(var(--logo-size) / 2));
+	top: calc(var(--index) * 2.8);
+	z-index: 1;
+} */
+
+.layers {
+	perspective: 1000px;
+	overflow: hidden;
+}
+.layers__container {
+	height: 100vh;
+	min-height: 500px;
+	transform-style: preserve-3d;
+	transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+	will-change: transform;
+	transition: transform var(--transition);
+}
+.layers__item {
+	position: absolute;
+	inset: -5vw;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.layer-1 {
+	transform: translateZ(-55px) scale(1.06);
+}
+.layer-2 {
+	transform: translateZ(80px) scale(.88);
+}
+.layer-3 {
+	transform: translateZ(180px) scale(.8);
+}
+.layer-4 {
+	transform: translateZ(190px) scale(.9);
+}
+.layer-5 {
+	transform: translateZ(300px) scale(.9);
+}
+.layer-6 {
+	transform: translateZ(380px);
+}
+.hero-content {
+	font-size: calc(var(--index) * 2.9);
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: calc(var(--index) * -.15);
+	line-height: 1.35em;
+	margin-top: calc(var(--index) * 5.5);
+}
+.hero-content span {
+	display: block;
+}
+.hero-content__p {
+	text-transform: none;
+	font-family: merriweather-italic-3d;
+	letter-spacing: normal;
+	font-size: calc(var(--index) * .73);
+	line-height: 3;
+}
+
+.layer-4, .layer-5, .layer-6 {
+	pointer-events: none;
+}
+
+.button {
+	padding: 1.05em 2.6em;
+	color: white;
+	background-color: blueviolet;
+	border: 1.5px solid transparent;
+	border-radius: 10em 0 10em 10em;
+	font-weight: 600;
+	text-decoration: none;
+	letter-spacing: .21em;
+	text-transform: uppercase;
+	font-size: .65em;
+	cursor: pointer;
+	position: fixed; /* Фиксируем кнопку на экране */
+	top: 150px;       /* Отступ сверху */
+	right: 150px;     /* Отступ справа */
+	padding: 10px 20px;
+	z-index: 9999; 
+}
+
+.button--top {
+	background-color: transparent;
+	border-color: blueviolet;
+}
+
+.button--main {
+	margin-top: 3em;
+	padding: 1.6em 3.5em;
+}
+
+.button:hover {
+	background-color: blueviolet;
+}
